@@ -281,3 +281,67 @@ def double_triple_map(arr):
 
 
 # 15
+# 1 square root and return whole number
+# loop from 0 to 9 (multiply numbers against the same number)
+# check if equal or greater
+
+def square_root(num):
+    for x in range(0, 10):
+        if(x*x == num):
+            return x
+        elif(x*x > num):
+            return x-1
+
+
+# print(square_root(0))
+
+# 2
+# In this activity you will be writing code to create a f
+# unction that takes two strings and checks to see if
+# the second string is present in the first string.
+# If so, the starting index of the second string in the
+# first string should be returned, else `-` should be returned.
+
+
+str1 = 'JavaScript'
+str2 = 'Scr'
+
+
+def str_str(str1, str2):
+    if len(str2) == 0:
+        return 0
+    indexes = str1.find(str2) if str2 in str1 else -1
+    return indexes
+
+
+# print(str_str(str1, str2))
+
+# In this activity you will be writing code to create a
+# function that takes a sorted array/list of
+# integers and then modifies the array to remove any duplicates.
+lists = [1, 1, 2, 3, 4, 4, 9, 9]
+# print(list(set(lists)))
+
+# 16
+# 1 In this activity you will be writing code to create a function
+# that takes an unsorted array of positive and unique
+# integers and returns the missing integer.
+
+# If no numbers are missing from the sequence, assume the missing
+# number is the next highest number in the sequence.
+
+
+def missing_number(nums):
+    if len(nums) == 0:
+        return 0
+    nums.sort()
+    for x in range(nums[0], nums[-1]+1):
+        if x in nums:
+            pass
+        else:
+            return x
+    return nums[-1]+1
+
+
+arr = [0, 9, 7, 3, 6, 5, 2, 3, 1, 4]
+# print(missing_number(arr))
